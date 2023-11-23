@@ -13,28 +13,27 @@ html {
 }
 
 header {
-  position : absolute;
+  position : fixed;
   right: 0;
   top: 0;
   z-index: 1000;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 33px 9%;
-  background: transparent;
+  background-color: transparent;  
   
 }
 
 .logo{
   font-size: 35px;
   font-weight: 700;
-  color: #909ec7;
+  color: #ffffff;
 }
 
 
 #menu-icon {
-  color: #909ec7;
+  color: #ffffff;
   font-size: 35px;
   z-index: 10001;
   cursor: pointer;
@@ -44,10 +43,14 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to top, #7f9af5 0%, #bbc8f0 28.53%, #ffffff 75.52%);
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,10)),
+  url(https://cdn.pixabay.com/photo/2016/10/07/13/08/wrangell-1721526_1280.jpg);
+  /*(background: linear-gradient(to top, #7f9af5 0%, #bbc8f0 28.53%, #ffffff 75.52%);*/
+  background-size: cover;
+  background-position: center;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
   align-items: center;
   gap: 2rem;
 }
@@ -59,52 +62,49 @@ section {
 .fp-text h5{
   font-size: 14px;
   font-weight: 400;
-  color: #9ab2fa;
+  color: #ffffff;
   margin-bottom: 10px
 }
 
 .fp-text h1{
   font-size: 90px;
   line-height: 1;
-  color: #909ec7;
+  color: #ffffff;
   margin: 0 0 45px;
 }
 
 b {
-  color: #909ec7;
+  color: #ffffff;
 }
 
 
 .fp-text p {
-  color:#ffffff;
+  color: #ffffff;
   font-size: 25px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
 
-.fp-img img {
-  float: right;
-  width: 700px;
-  height: auto;
-}
+
 
 .fp-text a {
   display: inline-block;
   color: white;
-  background: #fca1a1;
-  border: 1px solid transparent;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.45);
   padding: 12px 30px;
   line-height: 1.4 px;
   font-size: 40px;
   font-weight: 700;
   border-radius: 50px;
+  cursor: pointer;
   text-transform: uppercase;
   transition: all .55s ease;
 }
 
 .fp-text a:hover {
-  background: rgb(243, 181, 181);
-  border: 1px solid rgb(243, 181, 181);
+  background: #4c604d;;
+  border: 2px solid rgba(255, 255, 255, 0.45);
   transform: translateX(8px);
 }
 
@@ -119,21 +119,17 @@ b {
   display: block;
   margin: 26px 0;
   font-size: 24px;
-  color: #909ec7;
+  color: #ffffff;
   transition: all .50s ease;
   
 }
 
 .icons i:hover {
-  color: #cbd0dd; 
+  color: #ffffff;
   transform: translateY(-8px);
 }
 
 @media (max-width: 1100px) {
-  .fp-img img {
-    width: 100%;
-    height: auto;
-  }
   .fp-text h1 {
     font-size: 45px;
     margin: 0 0 30px;
@@ -151,13 +147,7 @@ b {
   .fp-text {
     padding-top: 115px;
   }
-  .fp-img {
-    text-align: center;
-  }
-  .fp-image img{
-    width: 350px;
-    height: auto;
-  }
+
   .fp {
     height: 100%;
     gap: 1rem;
@@ -168,17 +158,6 @@ b {
   }
 
 
-}
-
-#currentevents {
-  background: #7f9af5;
-  padding-top: 78px;
-}
-
-#currentevents h1{
-  text-align: center;
-  color: white;
-  font-size: 60px;
 }
 
 
@@ -193,7 +172,7 @@ b {
   height: 5px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(245.59deg, #3363ff 0%, #8fa4e2 28.53%, #5f6e9c 75.52%);
+  background: linear-gradient(245.59deg, #ffffff 0%, #acb9a3 28.53%, #738169 75.52%);
 }
 
 .separator i {
@@ -203,6 +182,73 @@ b {
   color: white;
 }
 
+#issue p {
+  display: inline-block;
+  font-size: 30px;
+  width: 40%;
+  vertical-align: top;
+  margin: 0px 50px;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 30px;
+  color: #86a787;
+  font-weight: 500;
+}
 
+#issue {
+  background: linear-gradient(rgba(0,0,0) 80%, #4c604d );
+  padding-top: 78px;
+  padding-bottom: 20%;
+}
+
+#issue h1{
+  text-align: center;
+  color: #6d8a6e;
+  font-size: 60px;
+}
+
+#issue img {
+  border: solid 10px transparent;
+  border-radius: 50px;
+  width: 40%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+  margin-top: 30px;
+}
+
+#ss {
+  background: #4c604d;
+  padding-top: 78px;
+}
+
+#ss img {
+  float: right;
+  border: solid 10px transparent;
+  border-radius: 50px;
+  width: 40%;
+  margin-top: 30px;
+}
+
+#ss h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+#ss p {
+  display: inline-block;
+  font-size: 34px;
+  width: 44%;
+  height: auto;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 90px;
+  margin-top: 30px;
+  padding-bottom: 40%;
+  line-height: 1.2;
+  color: white;
+  font-weight: 500;
+}
 
 

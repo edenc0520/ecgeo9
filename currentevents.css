@@ -43,7 +43,7 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,10)),
+  background-image: linear-gradient(rgba(0,0,0,0.55) , rgba(0, 0, 0, 1)),
   url(https://cdn.pixabay.com/photo/2016/10/07/13/08/wrangell-1721526_1280.jpg);
   /*(background: linear-gradient(to top, #7f9af5 0%, #bbc8f0 28.53%, #ffffff 75.52%);*/
   background-size: cover;
@@ -55,8 +55,8 @@ header {
   gap: 2rem;
 }
 
-section {
-  padding: 0 19%;
+section:not(.map, #gp) {
+  padding: 0 10%;
 }
 
 .fp-text h5{
@@ -106,6 +106,15 @@ b {
   background: #4c604d;;
   border: 2px solid rgba(255, 255, 255, 0.45);
   transform: translateX(8px);
+}
+
+.map {
+  width: 100%;
+  border-radius: 50px;
+  border: solid 10px #ffffff;
+  padding: 0px;
+  height: 220px;
+  margin-bottom: 20%;
 }
 
 .icons {
@@ -172,14 +181,35 @@ b {
   height: 5px;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(245.59deg, #ffffff 0%, #acb9a3 28.53%, #738169 75.52%);
+  background: #ffffff;
 }
 
 .separator i {
   font-size: 41px;
   margin: 0 15px;
   vertical-align: middle;
-  color: white;
+  color: #ffffff;
+}
+
+.separatorg {
+  text-align: center;
+  margin: 46px 0;
+}
+
+.separatorg hr {
+  display: inline-block;
+  width: 117px;
+  height: 5px;
+  border: none;
+  border-radius: 5px;
+  background:  #4c604d;
+}
+
+.separatorg i {
+  font-size: 41px;
+  margin: 0 15px;
+  vertical-align: middle;
+  color: #4c604d;
 }
 
 #issue p {
@@ -196,38 +226,48 @@ b {
 }
 
 #issue {
-  background: linear-gradient(rgba(0,0,0) 80%, #4c604d );
-  padding-top: 78px;
-  padding-bottom: 20%;
+  background: linear-gradient(to bottom left, rgb(255, 255, 255) 60%, #4c604d 10%);
+  padding-top: 2%;
+  padding-bottom: 10%;
 }
 
 #issue h1{
+  padding-top: 10%;
   text-align: center;
   color: #6d8a6e;
   font-size: 60px;
 }
 
 #issue img {
-  border: solid 10px transparent;
+  border: solid 10px #6d8a6e;
   border-radius: 50px;
   width: 40%;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
   object-position: top;
   margin-top: 30px;
+  margin-bottom: 10%;
 }
 
+
 #ss {
-  background: #4c604d;
+  background: linear-gradient(#4c604d 80%, white);
   padding-top: 78px;
 }
 
-#ss img {
-  float: right;
-  border: solid 10px transparent;
-  border-radius: 50px;
-  width: 40%;
-  margin-top: 30px;
+#ss p {
+  display: inline-block;
+  font-size: 35px;
+  width: 30%;
+  height: auto;
+  vertical-align: top;
+  text-align: left;
+  margin: 0 10%;
+  margin-top: 2%;
+  padding-bottom: 20%;
+  line-height: 1.2;
+  color: white;
+  font-weight: 500;
 }
 
 #ss h1 {
@@ -236,19 +276,120 @@ b {
   font-size: 60px;
 }
 
-#ss p {
-  display: inline-block;
-  font-size: 34px;
-  width: 44%;
-  height: auto;
-  vertical-align: top;
-  text-align: center;
-  margin: 0 90px;
+.wrang img {
+  float: right;
+  border: solid 10px #ffffff;
+  border-radius: 50px;
+  width: 50%;
   margin-top: 30px;
-  padding-bottom: 40%;
-  line-height: 1.2;
+}
+
+.highway h1 {
   color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+.highway img {
+  float: left;
+  border: solid 10px #ffffff;
+  border-radius: 50px;
+  width: 50%;
+  margin-top: 30px;
+}
+
+#inter {
+  background: white;  
+  text-align: center;
+}
+#inter h1 {
+  color: #4c604d;
+  text-align: center;
+  font-size: 60px;
+}
+
+#inter p {
+  font-size: 35px;
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin: 0 10%;
+  margin-top: 4%;
+  padding-bottom: 5%;
+  line-height: 1.2;
+  color: #4c604d;
   font-weight: 500;
 }
 
+#inter img {
+  width: 40%;
+  height: 600px;
+  border: solid 20px #4c604d;
+  border-radius: 50px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#gp {
+  background: linear-gradient(to bottom left #ffffff, silver);
+}
+
+#gp h1 {
+  padding-top: 10%;
+  color: #4c604d;
+  text-align: center;
+  font-size: 60px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.cimg {
+  width: 90%;
+  border: solid 10px #4c604d;
+  border-radius: 70px;
+  opacity: 0.7;
+  transition: opacity 0.5s linear;
+}
+
+.container:hover .cimg{
+  background-color: linear-gradient(0,0,0,0);
+  opacity: 1;
+}
+
+
+.social {
+  border-radius: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .5s, opacity 1s linear;
+}
+
+.container:hover .title {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.explanation {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibilty .5s, opacity 1s linear;
+}
+
+.container:hover .explanation {
+  visibility: visible;
+  opacity: 1;
+}
 
